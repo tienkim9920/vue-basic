@@ -1,21 +1,25 @@
 <script setup>
 import { RouterLink } from 'vue-router';
-
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="60" height="60" />
+    <img class="logo" width="60" height="60" src="@/assets/logo.svg" alt="Vue Logo">
     <nav>
-      <div class="btn-main">
-        <RouterLink to="/">Home Todo</RouterLink>
-      </div>
-      <div class="btn-action">
-        <RouterLink to="/create">Create Todo</RouterLink>
-      </div>
+      <RouterLink to="/">
+        <div class="btn-main">
+          Home
+        </div>
+      </RouterLink>
+      <RouterLink to="/create">
+        <div class="btn-action">
+          Create
+        </div>
+      </RouterLink>
     </nav>
   </header>
 
+  <router-view></router-view>
 </template>
 
 <style scoped>
