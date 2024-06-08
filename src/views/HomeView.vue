@@ -1,8 +1,11 @@
 <script setup>
 import { computed, onMounted, ref } from 'vue';
+import { useRouter } from 'vue-router';
 
 const users = ref([]);
 const txtSearch = ref('');
+
+const router = useRouter();
 
 onMounted(() => {
   (async () => {
@@ -23,40 +26,15 @@ const filterUsers = computed(() => {
     <input type="text" placeholder="Enter Search Here!" v-model="txtSearch" />
     <div class="group-card">
       <div class="card-item" v-for="user in filterUsers">
-        <h2>{{ user.name }}</h2>
-        <i>{{ user.email }}</i>
+        <div @click="router.push({ path: `/todo/${user?.id}` })">
+          <h2>{{ user?.name }}</h2>
+          <i>{{ user?.email }}</i>
+        </div>
       </div>
     </div>
   </main>
 </template>
 
 <style>
-input {
-  width: 100%;
-  padding: .6rem 1.2rem;
-  border-radius: 50px;
-  border: none;
-  outline: none;
-  background: #ededed;
-}
 
-.group-card {
-  margin-top: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  row-gap: 1.5rem;
-}
-
-.card-item {
-  border-radius: 10px;
-  background: #324558;
-  color: #fff;
-  cursor: pointer;
-  padding: .8rem 1rem;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
-}
-
-.card-item:hover {
-  background: #243241;
-}
 </style>

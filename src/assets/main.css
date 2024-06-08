@@ -1,11 +1,11 @@
 @import "./base.css";
 
 .color-primary {
-  color: #34495E;
+  color: #34495e;
 }
 
 .btn-main {
-  background: #34495E;
+  background: #34495e;
   padding: 0.4rem 1.6rem;
   color: #fff;
   border-radius: 4px;
@@ -31,4 +31,62 @@
 a {
   color: #fff;
   text-decoration: none;
+}
+
+input {
+  width: 100%;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  background: #ededed;
+}
+
+.group-card {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+.card-item {
+  border-radius: 10px;
+  background: #324558;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.8rem 1rem;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card-item:hover {
+  background: #243241;
+}
+
+input {
+  width: 100%;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  background: #ededed;
+}
+
+.group-card {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+.card-item {
+  border-radius: 10px;
+  background: #324558;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.8rem 1rem;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card-item:hover {
+  background: #243241;
 }
