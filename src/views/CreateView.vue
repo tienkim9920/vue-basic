@@ -9,7 +9,7 @@ const todoData = reactive({
 });
 
 const handleCreateNewData = async () => {
-  console.log(todoData);
+  console.log('todoData', todoData);
 };
 
 </script>
